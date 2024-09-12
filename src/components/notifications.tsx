@@ -3,14 +3,16 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Bell,
+  Apple,
+  PlayCircle,
   CheckCircle,
   Youtube,
   Twitter,
-  ShoppingCart,
   Users,
   Zap,
+  Bell,
 } from "lucide-react";
+import { Button } from "./ui/button";
 
 // Notification data (unchanged)
 const notifications = [
@@ -94,93 +96,65 @@ export default function Component() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen">
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <Bell className="h-6 w-6 text-blue-600" />
-          <span className="text-xl font-bold text-blue-800">NotifyNow</span>
-        </div>
-        <nav className="space-x-4">
-          <a
-            href="#"
-            className="text-sm font-medium text-gray-600 hover:text-blue-600"
-          >
-            Pricing
-          </a>
-          <a
-            href="#"
-            className="text-sm font-medium text-gray-600 hover:text-blue-600"
-          >
-            FAQ
-          </a>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
-            Get Started
-          </button>
-        </nav>
-
-        <div className="absolute right-[36rem] top-[10rem]">
-          <p className="text-gray-600 text-sm font-medium">
-            NotifyNow in Action
-          </p>
-          <svg
-            version="1.1"
-            id="ios7_x5F_arrows_1_"
-            xmlns="http://www.w3.org/2000/svg"
-            x="0"
-            y="0"
-            viewBox="0 0 128 128"
-            className="w-10 h-10 mt-2 mx-10 text-blue-400 fill-current"
-          >
-            <g id="_x32_9_1_">
-              <path
-                d="M121.7 90.6 85.9 54.7l-4.5 4.5 28.1 28.2H50c-22.4 0-40.5-18.2-40.5-40.6S27.7 6.2 50 6.2V0C24.2 0 3.3 21 3.3 46.8S24.2 93.6 50 93.6h60l-28.8 28.9 4.5 4.5 36.1-36.2-.1-.1v-.1z"
-                id="icon_12_"
-              />
-            </g>
-          </svg>
-        </div>
-      </header>
-
-      <main className="container mx-auto px-4 py-32">
+    <div className="">
+      <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-32 max-w-4xl">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Boost Engagement with Real-Time Notifications
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            NotifyNow helps you connect with your audience instantly. Increase
-            conversions, retain users, and grow your business with powerful,
-            customizable notifications.
-          </p>
-          <div className="flex justify-center space-x-4 mb-12">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition">
-              Start Free Trial
-            </button>
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-md text-lg font-semibold border border-blue-600 hover:bg-blue-50 transition">
-              Watch Demo
-            </button>
+          <div className="flex justify-center space-x-4">
+            <p className="text-lg max-w-xl text-gray-600 mb-8">
+              NotifyNow helps you connect with your audience instantly. Increase
+              conversions, retain users, and grow your business with powerful,
+              customizable notifications.
+            </p>
           </div>
-          <div className="">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-8">
-              Why Choose NotifyNow?
-            </h2>
-            <ul className="grid grid-cols-2 gap-4 text-left text-gray-600">
-              <li className="flex items-start">
+
+          <div className="flex justify-center space-x-4 mb-12">
+            <div className="space-y-2 text-gray-600">
+              <div className="flex items-start">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-1" />
                 <span>Instant setup, no coding required</span>
-              </li>
-              <li className="flex items-start">
+              </div>
+              <div className="flex items-start">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-1" />
                 <span>Customizable templates and designs</span>
-              </li>
-              <li className="flex items-start">
+              </div>
+              <div className="flex items-start">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-1" />
                 <span>Real-time analytics and insights</span>
-              </li>
-              <li className="flex items-start">
+              </div>
+              <div className="flex items-start">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-1" />
                 <span>Seamless integration with your stack</span>
-              </li>
-            </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center space-x-4 mb-12">
+            <Button className="bg-primary text-white px-6 py-3 text-lg font-semibold hover:bg-accent transition">
+              Start Free Trial
+            </Button>
+          </div>
+
+          <div className="inline-flex items-center bg-primary/10 text-primary text-xs font-medium px-3 py-3 rounded-full shadow-sm">
+            <div className="flex items-center mr-2">
+              <Bell className="w-4 h-4 mr-1" />
+              <span className="font-bold">NotifyNow</span>
+            </div>
+            <div className="w-px h-4 mr-2" />
+            <span className="mr-1.5 text-sm">Coming Soon:</span>
+            <div className="flex items-center gap-2 mr-4">
+              <Apple className="w-6 h-6" />
+              <span className="text-sm">App Store</span>
+            </div>
+
+            <div className="w-px h-6 bg-primary" />
+
+            <div className="flex items-center gap-2 mx-4">
+              <PlayCircle className="w-6 h-6" />
+              <span className="text-sm">Google Play</span>
+            </div>
           </div>
         </div>
       </main>
@@ -196,7 +170,7 @@ export default function Component() {
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: 100, opacity: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="bg-white rounded-2xl shadow-lg p-4 border border-gray-200 mb-4 pointer-events-auto"
+                  className="bg-white rounded-2xl shadow-lg p-4 border mb-4 pointer-events-auto"
                 >
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
