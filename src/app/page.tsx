@@ -4,6 +4,7 @@ import NotifyNowUseCases from "@/components/use-cases";
 import Navbar from "@/components/navbar";
 import NotifyNowIntegrations from "@/components/integrations";
 import NotifyNowFooter from "@/components/footer";
+import PricingSection from "@/components/pricing";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <NotifyNowFeatures />
         <NotifyNowUseCases />
         <NotifyNowIntegrations />
+        <PricingSection />
       </div>
       <NotifyNowFooter />
     </main>
