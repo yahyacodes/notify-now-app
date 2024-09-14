@@ -47,7 +47,7 @@ const SocialIcon = ({
 
 const NotifyNowFooter = () => {
   return (
-    <main className="px-4 bg-primary text-white py-12 border-t">
+    <main className="text-white border-t bg-primary container mx-auto px-4 py-16 sm:py-24 lg:py-36 rounded-3xl transition-all hover:shadow-lg shadow-primary/40">
       <footer>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -64,16 +64,16 @@ const NotifyNowFooter = () => {
               <h4 className="text-md font-semibold mb-4">Product</h4>
               <ul className="space-y-2">
                 <li>
-                  <FooterLink href="/features">Features</FooterLink>
+                  <FooterLink href="#">Features</FooterLink>
                 </li>
                 <li>
-                  <FooterLink href="/pricing">Pricing</FooterLink>
+                  <FooterLink href="#">Pricing</FooterLink>
                 </li>
                 <li>
-                  <FooterLink href="/integrations">Integrations</FooterLink>
+                  <FooterLink href="#">Integrations</FooterLink>
                 </li>
                 <li>
-                  <FooterLink href="/docs">Documentation</FooterLink>
+                  <FooterLink href="#">Documentation</FooterLink>
                 </li>
               </ul>
             </div>
@@ -81,16 +81,16 @@ const NotifyNowFooter = () => {
               <h4 className="text-md font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
                 <li>
-                  <FooterLink href="/about">About Us</FooterLink>
+                  <FooterLink href="#">About Us</FooterLink>
                 </li>
                 <li>
-                  <FooterLink href="/careers">Careers</FooterLink>
+                  <FooterLink href="#">Careers</FooterLink>
                 </li>
                 <li>
-                  <FooterLink href="/blog">Blog</FooterLink>
+                  <FooterLink href="#">Blog</FooterLink>
                 </li>
                 <li>
-                  <FooterLink href="/contact">Contact</FooterLink>
+                  <FooterLink href="#">Contact</FooterLink>
                 </li>
               </ul>
             </div>
@@ -98,26 +98,26 @@ const NotifyNowFooter = () => {
               <h4 className="text-md font-semibold mb-4">Legal</h4>
               <ul className="space-y-2">
                 <li>
-                  <FooterLink href="/privacy">Privacy Policy</FooterLink>
+                  <FooterLink href="#">Privacy Policy</FooterLink>
                 </li>
                 <li>
-                  <FooterLink href="/terms">Terms of Service</FooterLink>
+                  <FooterLink href="#">Terms of Service</FooterLink>
                 </li>
                 <li>
-                  <FooterLink href="/cookies">Cookie Policy</FooterLink>
+                  <FooterLink href="#">Cookie Policy</FooterLink>
                 </li>
               </ul>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-blue-50 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-300 mb-4 md:mb-0">
+            <p className="text-sm text-white mb-4 md:mb-0">
               © {new Date().getFullYear()} NotifyNow. All rights reserved.
             </p>
             <div className="flex space-x-4">
-              <SocialIcon href="https://facebook.com" icon={Facebook} />
-              <SocialIcon href="https://twitter.com" icon={Twitter} />
-              <SocialIcon href="https://linkedin.com" icon={Linkedin} />
-              <SocialIcon href="https://instagram.com" icon={Instagram} />
+              <SocialIcon href="#" icon={Facebook} />
+              <SocialIcon href="#" icon={Twitter} />
+              <SocialIcon href="#" icon={Linkedin} />
+              <SocialIcon href="#" icon={Instagram} />
             </div>
           </div>
         </div>

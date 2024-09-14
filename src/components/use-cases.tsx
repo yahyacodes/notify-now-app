@@ -89,7 +89,7 @@ const NotifyNowUseCases = () => {
   return (
     <div className="container mx-auto px-4 py-16 sm:py-24 lg:py-36">
       <div className="container mx-auto px-4">
-        <div className="flex gap-4 mb-8">
+        <div className="flex-noen lg:flex gap-4 mb-8">
           <div>
             <Image
               className="rounded-xl border transition-all hover:shadow-lg"
@@ -100,7 +100,7 @@ const NotifyNowUseCases = () => {
               quality={100}
             />
           </div>
-          <div className="mx-10">
+          <div className="mx-0 lg:mx-10 mt-10 lg:mt-0">
             <div className="bg-blue-50 p-1 border border-primary max-w-40 rounded-full mb-4">
               <div className="flex gap-2">
                 <DraftingCompass className="text-primary w-4 h-4" />
@@ -116,29 +116,29 @@ const NotifyNowUseCases = () => {
             <div className="flex">
               <div className="space-y-4 text-gray-600">
                 <div className="flex items-start border rounded-full p-2">
-                  <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>
+                  <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-2 md:mt-0.5" />
+                  <span className="text-sm md:text-md">
                     Boost engagement with timely, personalized notifications
                     across multiple channels.
                   </span>
                 </div>
                 <div className="flex items-start border rounded-full p-2">
-                  <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>
+                  <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-2 md:mt-0.5" />
+                  <span className="text-sm md:text-md">
                     Streamline communication workflows and reduce manual
                     outreach efforts.
                   </span>
                 </div>
                 <div className="flex items-start border rounded-full p-2">
-                  <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>
+                  <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-2 md:mt-0.5" />
+                  <span className="text-sm md:text-md">
                     Increase user retention by delivering relevant updates and
                     actionable information.
                   </span>
                 </div>
                 <div className="flex items-start border rounded-full p-2">
-                  <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>
+                  <CheckCircle className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-2 md:mt-0.5" />
+                  <span className="text-sm md:text-md">
                     Enhance decision-making with real-time alerts for critical
                     events and data changes.
                   </span>

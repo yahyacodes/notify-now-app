@@ -137,29 +137,31 @@ export default function Component() {
             </Button>
           </div>
 
-          <div className="inline-flex items-center bg-primary/10 text-primary text-xs font-medium px-3 py-3 rounded-full shadow-sm">
-            <div className="flex items-center mr-2">
-              <Bell className="w-4 h-4 mr-1" />
-              <span className="font-bold">NotifyNow</span>
-            </div>
-            <div className="w-px h-4 mr-2" />
-            <span className="mr-1.5 text-sm">Coming Soon:</span>
-            <div className="flex items-center gap-2 mr-4">
-              <Apple className="w-6 h-6" />
-              <span className="text-sm">App Store</span>
-            </div>
+          <div className="flex justify-center space-x-4">
+            <div className="inline-flex items-center bg-primary/10 text-primary text-xs font-medium px-3 py-3 rounded-full shadow-sm">
+              <div className="flex items-center mr-2">
+                <Bell className="w-4 h-4 mr-1" />
+                <span className="font-bold">NotifyNow</span>
+              </div>
+              <div className="w-px h-4 mr-2" />
+              <span className="mr-1.5 text-sm">Coming Soon:</span>
+              <div className="flex items-center gap-2 mr-4">
+                <Apple className="w-6 h-6" />
+                <span className="text-sm">App Store</span>
+              </div>
 
-            <div className="w-px h-6 bg-primary" />
+              <div className="w-px h-6 bg-primary" />
 
-            <div className="flex items-center gap-2 mx-4">
-              <PlayCircle className="w-6 h-6" />
-              <span className="text-sm">Google Play</span>
+              <div className="flex items-center gap-2 mx-4">
+                <PlayCircle className="w-6 h-6" />
+                <span className="text-sm">Google Play</span>
+              </div>
             </div>
           </div>
         </div>
       </main>
 
-      <div className="fixed right-4 top-20 w-96 space-y-4 pointer-events-none z-50">
+      <div className="fixed right-8 md:right-4 top-20 w-80 md:w-96 space-y-4 pointer-events-none z-50">
         <AnimatePresence>
           {notificationState.map(
             (notification) =>

@@ -11,13 +11,13 @@ import {
 
 export default function PricingSection() {
   return (
-    <section className="container mx-auto px-4 py-16 sm:py-24 lg:py-36">
+    <main className="container mx-auto px-4 py-16 sm:py-24 lg:py-36">
       <div className="container px-4 md:px-6">
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900">
             Pricing Plans
           </h2>
-          <p className="mx-auto mt-4 max-w-[600px] text-accent md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="mx-auto mt-4 max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Choose the perfect plan for your notification needs
           </p>
         </div>
@@ -115,6 +115,6 @@ export default function PricingSection() {
           </Card>
         </div>
       </div>
-    </section>
+    </main>
   );
 }

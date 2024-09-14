@@ -1,17 +1,25 @@
 "use client";
 
-import React from "react";
-import { Bell } from "lucide-react";
+import React, { useState } from "react";
+import { Bell, Menu } from "lucide-react"; // Add Menu icon
 import { Button } from "./ui/button";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header className="container mx-auto px-4 py-6 flex justify-between items-center">
+    <header className="container mx-auto px-4 py-6 flex justify-between items-center relative z-30">
       <div className="flex items-center space-x-2">
         <Bell className="h-6 w-6 text-primary" />
         <span className="text-xl font-bold text-blue-800">NotifyNow</span>
       </div>
-      <nav className="space-x-4">
+
+      {/* Navigation menu for larger screens */}
+      <nav className="space-x-4 items-center hidden md:flex">
         <a
           href="#"
           className="text-sm font-medium text-gray-600 hover:text-primary"
@@ -29,7 +37,48 @@ const Navbar = () => {
         </Button>
       </nav>
 
-      <div className="absolute right-[36rem] top-[10rem]">
+      {/* Menu Icon for small screens */}
+      <div className="md:hidden">
+        <Menu
+          onClick={toggleMenu}
+          className="h-6 w-6 text-primary cursor-pointer"
+        />
+      </div>
+
+      {/* Toggleable menu for small screens */}
+      {isMenuOpen && (
+        <>
+          {/* Overlay */}
+          <div
+            className="fixed inset-0 z-20"
+            onClick={toggleMenu} // Clicking the overlay closes the menu
+          ></div>
+
+          {/* Mobile menu */}
+          <nav className="absolute top-[4rem] right-3 bg-white shadow-lg shadow-primary/40 rounded-lg p-4 flex flex-row items-center space-x-4 w-[22rem] z-30">
+            <div className="flex flex-grow space-x-4">
+              <a
+                href="#"
+                className="text-sm font-medium text-gray-600 hover:text-primary"
+              >
+                Pricing
+              </a>
+              <a
+                href="#"
+                className="text-sm font-medium text-gray-600 hover:text-primary"
+              >
+                FAQ
+              </a>
+            </div>
+            <Button className="bg-primary text-white px-6 py-2 hover:bg-accent transition">
+              Get Started
+            </Button>
+          </nav>
+        </>
+      )}
+
+      {/* Icon and text for larger screens */}
+      <div className="absolute right-[5rem] top-[10rem] hidden lg:block">
         <p className="text-gray-600 text-sm font-medium">NotifyNow in Action</p>
         <svg
           version="1.1"
